@@ -6,6 +6,11 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 export PATH=$HOME/.local/bin:$PATH
+export ZSH=$HOME/.oh-my-zsh
+
+ZSH_THEME="powerlevel10k/powerlevel10k"
+DISABLE_UPDATE_PROMPT="true"
+source $ZSH/oh-my-zsh.sh
 
 # Use new auth plugin for Kubernetes 1.26+
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
